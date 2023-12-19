@@ -1,0 +1,172 @@
+<html>
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .header .name {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .header .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .header .contact span {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .header .contact a {
+      text-decoration: none;
+      color: #666;
+    }
+
+    .section {
+      margin-top: 20px;
+    }
+
+    .section .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .section .content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .section .content .item {
+      width: 50%;
+      padding: 10px;
+    }
+
+    .section .content .item .subtitle {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .section .content .item .subcontent {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .section .content .item .subcontent ul {
+      list-style: none;
+    }
+
+    .section .content .item .subcontent ul li {
+      margin-left: 20px;
+    }
+
+    .section .content .item .subcontent ul li:before {
+      content: "\2022";
+      color: #333;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+          <div class="name">Luís Branco</div>
+          <div class="contact">
+            <span>(+351) 910871912</span>
+            <a href="mailto:luisbranco00@outlook.pt">luisbranco00@outlook.pt</a>
+          </div>
+        </div>
+        <div class="section">
+          <div class="title">Summary</div>
+          <div class="content">
+            <div class="item">
+              <div class="subcontent">
+                <p>A creative and passionate graduate, with an urge to learn and improve himself and those who surround him.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="title">Skills</div>
+          <div class="content">
+            <div class="item">
+              <div class="subtitle">Languages</div>
+              <div class="subcontent">
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Java</li>
+                  <li>C</li>
+                  <li>Python</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Similar structure for 'Frameworks and Libraries', 'Tools and Platforms', and 'Other Skills' -->
+          </div>
+        </div>
+        <div class="section">
+          <div class="title">Experience</div>
+          <div class="content">
+            <div class="item">
+              <div class="subtitle">Research Fellow on Health Promotion in Children and Families of Primary Schools in Social Vulnerability Conditions (BeE-school)</div>
+              <div class="subcontent">
+                <p>June 1 - Present </p>
+                <ul>
+                  <li>Implemented advanced metric calculation scripts using Python, Numpy, Scipy</li>
+                  <li>Explored potential correlations between hypertension and socio-economic disadvantages</li>
+                  <li>Executed an ETL process for directly extracted data</li>
+                  <li>Utilized advanced deep/machine learning techniques to identify crucial socio-economic/nutritional behaviors significantly impacting children's health</li>
+                  <li>Enhanced SEO and web application performance by implementing best practices.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="title">Education</div>
+          <div class="content">
+            <div class="item">
+              <div class="subtitle">Master's Degree in Biomedical Engineering with a specialization in Medical Informatics</div>
+              <div class="subcontent">
+                <p>Universidade do Minho, 2018 - 2024</p>
+                <ul>
+                  <li>Dissertation: Benchmarking on Distributed Deep Learning in the Medical Domain</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
