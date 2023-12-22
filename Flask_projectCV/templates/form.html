@@ -8,7 +8,32 @@
       padding: 0;
     }
 	
-	
+	/* Updated CSS styles for form layout */
+
+/* Other styles remain the same */
+
+/* Style form inputs */
+	form input,
+	form button {
+	  display: block;
+	  width: calc(100% - 20px); /* Adjust width to accommodate padding */
+	  padding: 10px; /* Adjust padding for better spacing */
+	  margin-bottom: 15px; /* Separate inputs with margin */
+	  border: 1px solid #ccc;
+	  border-radius: 5px;
+	  box-sizing: border-box;
+	  transition: border-color 0.3s ease; /* Smooth transition on input focus */
+	}
+
+	/* Adjust input hover and focus styles */
+	form input:hover,
+	form input:focus,
+	form button:hover,
+	form button:focus {
+	  border-color: #007bff; /* Change border color on hover/focus */
+	  outline: none; /* Remove default outline */
+	}
+
 
     body {
       font-family: Arial, sans-serif;
@@ -152,60 +177,18 @@
           </div>
         </div>
         <div class="section">
-          <div class="title">Summary</div>
+          <div class="title">Contact Me</div>
           <div class="content">
             <div class="item">
               <div class="subcontent">
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section">
-          <div class="title">Skills</div>
-          <div class="content">
-            <div class="item">
-              <div class="subtitle">Languages</div>
-              <div class="subcontent">
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>Java</li>
-                  <li>C</li>
-                  <li>Python</li>
-                </ul>
-              </div>
-            </div>
-            <!-- Similar structure for 'Frameworks and Libraries', 'Tools and Platforms', and 'Other Skills' -->
-          </div>
-        </div>
-        <div class="section">
-          <div class="title">Experience</div>
-          <div class="content">
-            <div class="item">
-              <div class="subtitle">Research Fellow on Health Promotion in Children and Families of Primary Schools in Social Vulnerability Conditions (BeE-school)</div>
-              <div class="subcontent">
-                <p>June 1 - Present </p>
-                <ul>
-                  <li>Implemented advanced metric calculation scripts using Python, Numpy, Scipy</li>
-                  <li>Explored potential correlations between hypertension and socio-economic disadvantages</li>
-                  <li>Executed an ETL process for directly extracted data</li>
-                  <li>Utilized advanced deep/machine learning techniques to identify crucial socio-economic/nutritional behaviors significantly impacting children's health</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section">
-          <div class="title"><i class="fa fa-book" aria-hidden="true"></i>Education</div>
-          <div class="content">
-            <div class="item">
-              <div class="subtitle">Master's Degree in Biomedical Engineering with a specialization in Medical Informatics</div>
-              <div class="subcontent">
-                <p>Universidade do Minho, 2018 - 2024</p>
-                <ul>
-                  <li>Dissertation: Benchmarking on Distributed Deep Learning on Medical Applications</li>
-                </ul>
+				<form action="/submit" method="post">
+					<input type="text" name="Name" placeholder="Name">
+					<input type="email" name="Email" placeholder="Email">
+					<input type="text" name="Company" placeholder="Company/Afiliation">
+					<input type="text" name="Subject" placeholder="Propose">
+					<input type="text" name="Wage" placeholder="Content">
+					<button type="submit">Submit</button>
+				</form>
               </div>
             </div>
           </div>

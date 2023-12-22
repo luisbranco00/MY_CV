@@ -1,0 +1,165 @@
+
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+   * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+	
+	
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+	  max-width: 75%; /* Set to 75% for 3/4 of the page */
+	  margin: 0 auto; /* Center horizontally */
+	  padding: 20px;
+	  margin-left: 50px; /* Adjust the left margin */
+	}
+		/* Style the navigation buttons */
+	header nav ul {
+	  list-style: none;
+	  display: flex;
+	  gap: 20px; /* Adjust the space between buttons */
+	}
+
+	header nav ul li {
+	  display: inline-block;
+	}
+
+	header nav ul li a {
+	  text-decoration: none;
+	  color: #333;
+	  padding: 10px 15px; /* Adjust button padding */
+	  border: 1px solid #333; /* Add border */
+	  border-radius: 5px; /* Add border-radius for rounded corners */
+	  transition: background-color 0.3s ease; /* Smooth transition on hover */
+	}
+
+	header nav ul li a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    header .name {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    header .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    header .contact span {
+      font-size: 14px;
+      color: #666;
+    }
+
+    header .contact a {
+      text-decoration: none;
+      color: #666;
+    }
+    
+
+    .section {
+      margin-top: 20px;
+    }
+
+    .section .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .section .content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .section .content .item {
+      width: 75%;
+      padding: 10px;
+    }
+
+    .section .content .item .subtitle {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .section .content .item .subcontent {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .section .content .item .subcontent ul {
+      list-style: none;
+    }
+
+    .section .content .item .subcontent ul li {
+      margin-left: 20px;
+    }
+
+    .section .content .item .subcontent ul li:before {
+      content: "\2022";
+      color: #333;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+	</style>
+</head>
+<body>
+	<header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('scholar_projects') }}">Scholar Projects</a></li>
+            <li><a href="{{ url_for('about_me') }}">About Me</a></li>
+			<li><a href="{{ url_for('form') }}">Contact Me</a></li>
+			<li><a href="https://github.com/luisbranco00">GitHub</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+  <div class="container">
+    <div class="header">
+      <div class="name">Scholar Projects</div>
+    </div>
+    <div class="section">
+      <div class="title">Section Title</div>
+      <div class="content">
+        <div class="item">
+          <div class="subcontent">
+            <p>Your text goes here...</p>
+          </div>
+        </div>
+        <!-- Additional sections or content can be added similarly -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
