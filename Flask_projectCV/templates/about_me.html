@@ -1,160 +1,179 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <style>
- * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-	
-	
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-    }
-
-    .container {
-	  max-width: 75%; /* Set to 75% for 3/4 of the page */
-	  margin: 0 auto; /* Center horizontally */
-	  padding: 20px;
-	  margin-left: 50px; /* Adjust the left margin */
-	}
-		/* Style the navigation buttons */
-	header nav ul {
-	  list-style: none;
-	  display: flex;
-	  gap: 20px; /* Adjust the space between buttons */
-	}
-
-	header nav ul li {
-	  display: inline-block;
-	}
-
-	header nav ul li a {
-	  text-decoration: none;
-	  color: #333;
-	  padding: 10px 15px; /* Adjust button padding */
-	  border: 1px solid #333; /* Add border */
-	  border-radius: 5px; /* Add border-radius for rounded corners */
-	  transition: background-color 0.3s ease; /* Smooth transition on hover */
-	}
-
-	header nav ul li a:hover {
-      background-color: #333;
-      color: #fff;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 10px;
-    }
-
-    header .name {
-      font-size: 32px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    header .contact {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-
-    header .contact span {
-      font-size: 14px;
-      color: #666;
-    }
-
-    header .contact a {
-      text-decoration: none;
-      color: #666;
-    }
-
-    .section {
-      margin-top: 20px;
-    }
-
-    .section .title {
-      font-size: 24px;
-      font-weight: bold;
-      color: #333;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 10px;
-    }
-
-    .section .content {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .section .content .item {
-      width: 75%;
-      padding: 10px;
-    }
-
-    .section .content .item .subtitle {
-      font-size: 18px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .section .content .item .subcontent {
-      font-size: 14px;
-      color: #666;
-    }
-
-    .section .content .item .subcontent ul {
-      list-style: none;
-    }
-
-    .section .content .item .subcontent ul li {
-      margin-left: 20px;
-    }
-
-    .section .content .item .subcontent ul li:before {
-      content: "\2022";
-      color: #333;
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
-	</style>
+<title>Welcome to my online CV</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
 </head>
 <body>
-  <header>
-    <nav>
-        <ul>
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('scholar_projects') }}">Scholar Projects</a></li>
-            <li><a href="{{ url_for('about_me') }}">About Me</a></li>
-			<li><a href="{{ url_for('form') }}">Contact Me</a></li>
-			<li><a href="https://github.com/luisbranco00">GitHub</a></li>
-        </ul>
-    </nav>
-</header>
 
-  <div class="container">
-    <div class="header">
-      <div class="name">About Me</div>
-    </div>
-    <div class="section">
-      <div class="title">Interests</div>
-      <div class="content">
-        <div class="item">
-          <div class="subcontent">
-            <p>Born in Porto, I'm nearing the end of my MSD dissertation on Distributed Deep Learning, spurred by a never-ending quest for knowledge and creativity. I exemplify perseverance and a disciplined work ethic, continually seeking to create an environment favorable to development and learning in any professional area. My ethos is around building a collaborative work atmosphere that is distinguished by leadership and a genuine desire to improve people around me. I desire not only personal growth, but also to improve the lives and skills of others with whom I work. This persistent drive to constant progress inspires my ambitions, instilling a spirit of resilience and an unflinching devotion to excellence in all that I do.  </p>
-          </div>
-        </div>
-        <!-- Additional sections or content can be added similarly -->
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="{{ url_for('home') }}" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="{{ url_for('home') }}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About Me </a>
+    <a href="{{ url_for('home') }}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Experience</a>
+    <a href="{{ url_for('scholar_project') }}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Scholar Projects</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact Me</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">More <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="{{ url_for('about_me') }}" class="w3-bar-item w3-button">Academic Acheivements</a>
+        <a href="{{ url_for('form') }}" class="w3-bar-item w3-button">Other Activities</a>
       </div>
     </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="{{ url_for('home') }}" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About Me</a>
+  <a href="{{ url_for('home') }}" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Experience</a>
+  <a href="{{ url_for('scholar_project') }}" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Scholar Projects</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact Me</a>
+  <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">More <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="{{ url_for('about_me') }}" class="w3-bar-item w3-button">Academic Acheivements</a>
+        <a href="{{ url_for('form') }}" class="w3-bar-item w3-button">Other Activities</a>
+      </div>
+    </div>
+</div>
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+<div style="background-color: #f0f0f0; padding: 20px; border-radius: 10px;">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px; text-align: left;">
+    <h2 class="w3-wide" style="text-align: center">Academic Acheivements</h2>
+    <h3>Excellence Grades</h3>
+    <ul>
+        <li>Honor Board in 5th and 6th grades at Agrupamento de Escolas Eugénio de Andrade</li>
+        <li>Honor Board in 7th and 9th grades at Agrupamento de Escolas Aurélia de Sousa</li>
+        <li>Honor Board in 10th, 11th, and 12th grades at Externato Ribadouro</li>
+        <li>Finished high school with an average of 19/20 </li>
+        <li>Concluding Master's degree in Medical Informatics with an expected average of 16/20</li>
+    </ul>
+    <h3>Academic Awards</h3>
+    <ul>
+        <li>Finalist in the Mathematics Olympics (2012, 2013)</li>
+        <li>Finalist in the 'Canguro da Matemática' competition (2012, 2013)</li>
+        <li>Finalist in the SuperT Mental Calculation competition (2013, 2015)</li>
+        <li>Finalist in the SuperT Portuguese language competition (2013)</li>
+
+    </ul>
+  </div>
+</div>
+
+
+<div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <p class="w3-opacity w3-center"><i>Interessested in working with me?</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Porto, Portugal<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +351 910871912<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: luisbranco00@outlook.pt<br>
+      </div>
+    </div>
+<form action="/submit" method="POST">
+  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+    <div class="w3-half">
+      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+    </div>
+    <div class="w3-half">
+      <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+    </div>
+  </div>
+  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+    <div class="w3-half">
+      <input class="w3-input w3-border" type="text" placeholder="Company" required name="Company">
+    </div>
+    <div class="w3-half">
+      <input class="w3-input w3-border" type="text" placeholder="Propose" required name="Propose">
+    </div>
+  </div>
+  <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+  <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+</form>
+</div>
+</div>
+<!-- End Page Content -->
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+<a href="https://github.com/luisbranco00" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
+<a href="https://www.linkedin.com/in/luís-branco-1a3b292a7" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 4000);
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
+    <!-- Additional sections or content can be added similarly --
+      </div>
+    </div>
+    <div class="section">
+    <div class="name">Other Activities</div>
+    <div class="content">
+        <div class="item">
+            <ul>
+                <li>Captain of Federated Football Team (2011-2018)</li>
+                <li>Ambassador for welcoming new students at the University of Minho (2022)</li>
+                <li>Participation in the Food Bank Against Hunger</li>
+                <li>Volunteering at the 'BomFim' Foundation (2018)</li>
+                <li>Finalist in the Mathematics Olympics (2013)</li>
+                <li>Finalist in the SuperT Mental Calculation competition (2013, 2015) and Portuguese language (2013)</li>
+            </ul>
+        </div>
+
+    </div>
+    </div>
+
   </div>
 </body>
 </html>
+-->
+
